@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas绘图基础（绘制弧）</title>
+    <script type="text/javascript">
+        window.addEventListener('load', eventWindowLoaded, false);
+        function eventWindowLoaded() {
+            canvasApp();
+        }
+
+        function canvasApp() {
+            var theCanvas = document.getElementById('canvas');
+            var context = theCanvas.getContext('2d');
+            context.lineWidth=10;
+            context.strokeStyle='pink';
+             context.arc(100, 100, 50, Math.PI*1, Math.PI*1.5);
+             context.stroke();
+             context.beginPath();             
+             context.arc(100, 100, 50, Math.PI*0.5 ,0 ,true);
+             context.stroke();   
+         
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <!--<div style="position: absolute; top: 50px; left: 50px;">-->
+    <div>
+        <canvas id="canvas" width="500" height="500" style="border:solid #ccc 2px">
+            Your browser does not support the HTML 5 Canvas.
+        </canvas>
+    </div>
+</body>
+
+</html>
