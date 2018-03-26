@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>密码可见</title>
+	<style>
+	#di{
+		text-align: center;
+		padding-top: 100px;
+	}
+	#psw{
+		height: 20px;
+	}	 
+	</style>
+	<script>
+	window.onload=function(){
+		 var tu=document.getElementById('tu');
+	     var psw=document.getElementById('psw');
+	     tu.onmouseover=function(){
+	     	psw.type="text";//是密码可见将类型改为text即可；
+	      }
+	     tu.onmouseout=function(){
+	     	tu.src="images/hide.png";
+	     	psw.type="password";
+	  }
+	}
+	 
+	</script>
+</head>
+<body>
+<div id="di">
+	<span style="font-size: 20px;">密码:&nbsp;<span>
+	<input type="password" id="psw" placeholder="请输入密码"/><button id="tu">可见</button>
+</div>
+   
+</body>
+</html>
